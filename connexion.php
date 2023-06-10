@@ -14,7 +14,7 @@ session_start();
 
 <!--header de la page-->
 <header> 
-    <img src="images/accueil.png" alt="logo" width="250" height="150">
+    <img src="images/jl.png" alt="logo" width="250" height="150">
     <div>
         <h1 id="gros_titre">VISITEUR</h1>
         <h1>Se connecter à son compte jeune</h1>
