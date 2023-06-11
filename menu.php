@@ -226,7 +226,7 @@
                 $mail->Body = "Bonjour,\n Jeunes 6.4 est un site permettant la mise en valeur des expériences de la jeunesse.\n 
                 Pour ce faire, les jeunes se font approuver leurs qualitées par le biais de référent pouvant faire valoir ces expériences.\n
                 Une fois ses expériences validées, le jeune peut les envoyer à des consultants comme vous afin de se mettre en avant.\n
-                Pour consulter les expériences que ce jeune vous partage, cliquez sur le lien suivant: http://localhost/Jeunes/jeune/consultant.php?id=".$ids;
+                Pour consulter les expériences que ce jeune vous partage, cliquez sur le lien suivant: http://localhost/Jeunes/jeune/consultant.php?".$ids;
 
 
 
