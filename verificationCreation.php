@@ -31,7 +31,6 @@
         $line = fgets($file);
         $data = explode(',', $line);
         $id++;
-        ////////////////// FAUT FAIRE POUR CHAQUE CHAMPS AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA PEUT ETRE EN FAITE RIEN NEST SUR AAAAAAAAAAAAAAAAAAAA
     }
 
     // on compare les identifiants pour savoir si le compte existe deja
@@ -39,23 +38,14 @@
     if($conditions) // le compte existe deja
     {
         $_SESSION['existe'] = true;
-
-
-        /////// IL Y A BESOIN DE UNSET LES PARAMETRES DE SESSION ?????????????????????????????????????????????????  JE PENSE PAS
-
+	    
         fclose($file);
 
         // on redirige vers la page de creation de compte
         echo "<script> window.location.replace('creation.php'); </script>";
     }
     else //le compte n'existe pas 
-    {
-
-        ////////////// FAUT METTTTTTTTTTTTTTTTTTRRRRRRRRRREEEEEEEEEEEEEEEEEEEEE TOUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUT LES CHAMPS AAAAAAAAAAAAAAAAAAAAAA
-
-        ///////////// FAUT HASHER LE MOT DE PASSE AUSSI COMME CA ON PEUT UTILISER , COMME SEPARATEUR
-        //////////////$mdp = password_hash($password, $algo,  $options = []): string
-        
+    {        
         // l'utilisateur est connecté
         $_SESSION['connecte'] = true;
 
@@ -76,10 +66,6 @@
 
     
 ?>
-
-<!--
-    commentaire 
--->
 
 </body>
 </html>
