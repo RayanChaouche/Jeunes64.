@@ -152,12 +152,46 @@
     {
         if(!empty($_POST['check_list'])) // on verifie si il a bien validé au moins une checkbox
         {
+		
+		// on ouvre le fichier csv contenant toutes les demandes
+            $file = fopen("demandes.csv", "r") or die("Ouverture du fichier demandes.csv impossible");
+
+            // on cherche toute les demandes que l'on doit écrire dans le livret
+            $articles = array(); 
+            $i = -1;
+            while(!feof($file)) // on parcourt le fichier
+            {
+                
+                if($i != -1) // $data n'existe pas à la 1 ere boucle donc pas besoin de comparer les id
+                {
+                    foreach($_POST['check_list'] as $id) // pour chaque demande validée
+                    {
+                        if($data[0] == $id) // si la ligne que l'on parcourt est une ligne que l'on veut utiliser dans le fichier html 
+                        {
+                            $articles[$i] = explode(',', $line);
+                            $i++;
+                        }
+                    }
+                }
+                else
+                {
+                    $i = 0;
+                }
+
+                $line = fgets($file);
+                $data = explode(',', $line);
+            }
+
+            fclose($file);
+		
+		
+		
             $ids = '';
 
             $i = 0;
 
             // on doit faire le lien de façon à retrouver tout les ids avec get
-            foreach($_POST['check_list'] as $article) // on cherche à avoir un string de cette forme la: a[]=1&a[]=2&a[]=3
+            foreach($articles as $article) // on cherche à avoir un string de cette forme la: a[]=1&a[]=2&a[]=3
             {
                 if($i==0)   // pour la 1ere iteration nous ne devons pas mettre un &
                 {
