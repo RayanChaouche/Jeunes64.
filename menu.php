@@ -195,12 +195,12 @@
             {
                 if($i==0)   // pour la 1ere iteration nous ne devons pas mettre un &
                 {
-                    $ids = $ids ."id[]=". $article[0];
+                    $ids = $ids ."id[]=". $article[0].$article[1].$article[2].$article[3];
                     $i=1;
                 }
                 else
                 {
-                    $ids = $ids ."&id[]=". $article[0];
+                    $ids = $ids ."&id[]=".  $article[0].$article[1].$article[2].$article[3];
                 }
             }
 
