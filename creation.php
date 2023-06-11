@@ -66,12 +66,8 @@
         // on met les parametres du comptes comme parametres de la session (on se connecte des que l'on a cree le compte) 
         $_SESSION['password'] = $_POST['password'];
         $_SESSION['username'] = $_POST['username'];
-
-        echo "<p>".$_POST['username']." === ".$_POST['password'];
-        echo "<br>".$_SESSION['username']." === ".$_SESSION['password'];
-        echo "</p>";
-
-        echo "<script> window.location.assign(\"verificationCreation.php\");;</script>";
+	    
+        echo "<script> window.location.assign(\"verificationCreation.php\");</script>";
     }
     
 ?>
