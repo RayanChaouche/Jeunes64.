@@ -39,7 +39,7 @@
 
 
 
-    $conditions = (isset($db[$_SESSION['username']]) && strcmp($db[$_SESSION['username']][0], $_SESSION['password'])==0);
+    $conditions = (isset($db[$_SESSION['username']]) && strcmp($db[$_SESSION['username']][0], $_SESSION['password']));
     if($conditions) // si l' username et le password correspondent
     {
         $_SESSION['connecte'] = true;
