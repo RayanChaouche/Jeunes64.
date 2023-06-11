@@ -311,7 +311,7 @@
         // envoie une alerte à l'utilisateur pour savoir si la demande a bien était enregistré
         echo "<script>alert(\"adresse=".$_POST["email"].$message."\");</script>";
 
-        echo "<script> window.location.replace(\""menu.php\");</script>";
+        echo "<script> window.location.replace(\"menu.php\");</script>";
         
     }
 ?>
